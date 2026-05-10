@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# Random Cat Viewer 🐱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, modern web application that fetches and displays random cat pictures along with fascinating facts and details. Built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Dynamic Data Fetching**: Retrieves random cat profiles using the Free API (`https://api.freeapi.app/api/v1/public/cats/cat/random`).
+- **Modern & Premium UI**: Features a beautiful glassmorphic interface, dynamic layout stacking, and soft shadows built entirely with Tailwind CSS.
+- **Uncropped Image Display**: Designed using an `object-contain` strategy layered over a dynamic, responsive blurred-background backdrop to ensure cat photos are never cropped and always pop out elegantly.
+- **Dark Mode**: Comes with a built-in Dark Mode toggle that maps flawlessly to your system preferences. 
+- **Smooth Animations**: Includes loading skeletons, smooth fade-ins, hover scaling effects, and beautiful entrance animations powered by pure CSS.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To get a local copy up and running, follow these simple steps.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Make sure you have Node.js and an up-to-date package manager (like `npm`, `yarn`, or `bun`) installed.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone the repository
+   ```sh
+   git clone https://github.com/Ritesh591/random-cat-viewer.git
+   ```
+2. Navigate to the project directory
+   ```sh
+   cd random-cat-viewer
+   ```
+3. Install dependencies
+   ```sh
+   bun install
+   ```
+   *(or use `npm install`, `yarn install` based on your preference)*
+4. Start the development server
+   ```sh
+   bun dev
+   ```
+5. Open `http://localhost:5173` in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🤝 Contributing
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
+
+## 📝 License
+
+This project is licensed under the MIT License.
