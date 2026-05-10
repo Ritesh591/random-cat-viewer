@@ -1,0 +1,33 @@
+@layer utilities {
+  .animate-in {
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: forwards;
+  }
+  
+  .slide-in-from-bottom-8 {
+    animation-name: slideInFromBottom;
+  }
+  
+  .fade-in {
+    animation-name: fadeIn;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(2rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
